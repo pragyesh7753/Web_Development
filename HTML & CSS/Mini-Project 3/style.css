@@ -1,0 +1,217 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Salesforce Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+}
+
+#header {
+    width: 100%;
+    height: 13%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: 620;
+    background-color: #ffffff;
+    z-index: 100;
+}
+
+#logo {
+    height: 50%;
+    margin: 25px;
+}
+
+
+#logo img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+}
+
+.menu {
+    color: #1b00a0;
+    margin: 10px;
+    display: flex;
+}
+
+.menu:hover {
+    color: #046cc2;
+}
+
+#contactDetails {
+    padding-left: 90px;
+    color: #02023a;
+    font-weight: normal;
+}
+
+.icon {
+    color: #060141;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.icon:hover {
+    background-color: lightblue;
+}
+
+#login {
+    color: #02023a;
+    display: flex;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+#login:hover {
+    background-color: lightblue;
+}
+
+#try {
+    color: #ffffff;
+    background-color: #2E844A;
+    padding: 10px 20px;
+}
+
+#try:hover {
+    background-color: #1C3326;
+}
+
+#fakeHeader {
+    width: 100%;
+    height: 13%;
+}
+
+#page1 {
+    height: 87%;
+    width: 100%;
+}
+
+#strip {
+    width: 100%;
+    height: 8%;
+    background-color: #00008d;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#strip u {
+    margin-left: 20px;
+    font-weight: lighter;
+}
+
+#content {
+    width: 100%;
+    height: 76%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#box1 {
+    height: 90%;
+    width: 47%;
+    background-color: #ffffff;
+}
+
+#box2 {
+    height: 90%;
+    width: 47%;
+    background-color: white;
+}
+
+#box2 img {
+    width: 110%;
+    height: 110%;
+    transform: translate(0%, -5.1%);
+    /* position: ; */
+}
+#card{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(0%, -110%);
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+
+#heading {
+    width: 100%;
+    height: 16%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0a0a9b;
+}
+
+g #heading h1 {
+    font-weight: 600;
+}
+
+#box1 h1 {
+    font-weight: 640;
+    color: #032D60;
+    font-size: 50px;
+    margin: 30px 10px;
+}
+
+#box1 p {
+    font-size: x-large;
+    margin: 10px;
+    font-weight: light;
+    margin: 30px 10px;
+}
+
+#btns {
+    display: flex;
+}
+
+#btn1 {
+    margin: 10px;
+    margin-left: 30px;
+    padding: 15px 35px;
+    color: white;
+    background-color: #0e8bc0;
+    border-radius: 4px;
+}
+
+#btn1:hover {
+    background-color: #032d60;
+}
+
+#btn2 {
+    margin: 10px;
+    margin-left: 20px;
+    padding: 15px 35px;
+    color: #0176D3;
+    border-radius: 4px;
+    border: 1px solid lightblue;
+}
+
+#btn2:hover {
+    background-color: #6cd0f1;
+    color: #03254e;
+    border-color: #03254e;
+}
+
+#page2 {
+    height: 87%;
+    width: 100%;
+    background-color: darkgray;
+}

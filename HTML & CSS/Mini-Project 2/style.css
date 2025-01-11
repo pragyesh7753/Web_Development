@@ -16,7 +16,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #ecd8bd;
+    background-color: rgb(236, 216, 189);
 }
 
 .card {
