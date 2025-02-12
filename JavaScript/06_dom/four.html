@@ -8,8 +8,8 @@
 </head>
 
 <body style="background-color: #212121; color: #fff;">
-    <ul>
-        <li class="language">Javascript</li>
+    <ul class="language">
+        <li>Javascript</li>
     </ul>
 </body>
 <script>
@@ -35,6 +35,14 @@
     const newli = document.createElement("li")
     newli.textContent = "Mojo"
     secondLang.replaceWith(newli)
+
+    // edit
+    const FirstLang = document.querySelector("li:first-child")
+    FirstLang.outerHTML = "<li>TypeScript</li>"
+
+    // remove
+    const lastLang = document.querySelector("li:last-child")
+    lastLang.remove()
 </script>
 
 </html>
