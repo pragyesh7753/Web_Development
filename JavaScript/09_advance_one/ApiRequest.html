@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #212121;">
+    <h1 style="color: white; text-align: center;">Api Request</h1>
+    <div style="display: flex; justify-content: center;">
+        <div style="background-color: #333; padding: 10px; border-radius: 10px;">
+            <h2 style="color: white;">User Details</h2>
+            <div style="color: white;">
+                <img src="https://avatars.githubusercontent.com/u/116973800?v=4" alt="">
+                <p>Name: <span id="name"></span></p>
+                <p>Location: <span id="location"></span></p>
+                <p>Public Repos: <span id="public_repos"></span></p>
+                <p>Followers: <span id="followers"></span></p>
+                <p>Following: <span id="following"></span></p>
+                <p>Profile: <a href="" id="profile" target="_blank">Link</a></p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/pragyesh7753'
+    const xhr = new XMLHttpRequest()
+    xhr.open('GET', requestUrl)
+    xhr.onreadystatechange = function () {
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+            const data = JSON.parse(this.responseText)
+            console.log(data);
+            // console.log(this.responseText);
+            // console.log(xhr.responseText);
+        }
+    }
+    xhr.send()
+
+    const card = {
+        "name": document.getElementById('name'),
+        "location": document.getElementById('location'),
+        "public_repos": document.getElementById('public_repos'),
+        "followers": document.getElementById('followers'),
+        "following": document.getElementById('following'),
+        "profile": document.getElementById('profile')
+    }
+</script>
+
+</html>
