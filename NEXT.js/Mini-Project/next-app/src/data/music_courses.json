@@ -1,0 +1,104 @@
+{
+    "courses": [
+        {
+            "id": 1,
+            "title": "Guitar Fundamentals",
+            "slug": "guitar-fundamentals",
+            "description": "Learn the basics of guitar with our comprehensive beginner's course.",
+            "price": 99.99,
+            "instructor": "John Doe",
+            "isFeatured": true,
+            "image": "/courses/guitar.jpg"
+        },
+        {
+            "id": 2,
+            "title": "Piano Masterclass",
+            "slug": "piano-masterclass",
+            "description": "Master piano techniques from beginner to advanced with this comprehensive course.",
+            "price": 129.99,
+            "instructor": "Sarah Johnson",
+            "isFeatured": true,
+            "image": "/courses/piano.jpg"
+        },
+        {
+            "id": 3,
+            "title": "Drumming Essentials",
+            "slug": "drumming-essentials",
+            "description": "Build rhythm and coordination with our step-by-step drumming course.",
+            "price": 89.99,
+            "instructor": "Mike Thompson",
+            "isFeatured": false,
+            "image": "/courses/drums.jpg"
+        },
+        {
+            "id": 4,
+            "title": "Vocal Training",
+            "slug": "vocal-training",
+            "description": "Develop your singing voice with professional vocal techniques and exercises.",
+            "price": 109.99,
+            "instructor": "Maria Garcia",
+            "isFeatured": true,
+            "image": "/courses/vocal.jpg"
+        },
+        {
+            "id": 5,
+            "title": "Music Theory 101",
+            "slug": "music-theory-101",
+            "description": "Understand the fundamentals of music theory to enhance your musical abilities.",
+            "price": 79.99,
+            "instructor": "Professor Alan Wright",
+            "isFeatured": true,
+            "image": "/courses/theory.jpg"
+        },
+        {
+            "id": 6,
+            "title": "Bass Guitar for Beginners",
+            "slug": "bass-guitar-beginners",
+            "description": "Learn to lay down the groove with this beginner-friendly bass guitar course.",
+            "price": 89.99,
+            "instructor": "James Wilson",
+            "isFeatured": false,
+            "image": "/courses/bass.jpg"
+        },
+        {
+            "id": 7,
+            "title": "Violin Virtuoso",
+            "slug": "violin-virtuoso",
+            "description": "Master the violin with techniques from classical to contemporary styles.",
+            "price": 119.99,
+            "instructor": "Elizabeth Chen",
+            "isFeatured": false,
+            "image": "/courses/violin.jpg"
+        },
+        {
+            "id": 8,
+            "title": "Electronic Music Production",
+            "slug": "electronic-music-production",
+            "description": "Create professional electronic music using modern production techniques and software.",
+            "price": 149.99,
+            "instructor": "DJ Marcus",
+            "isFeatured": false,
+            "image": "/courses/electronic.jpg"
+        },
+        {
+            "id": 9,
+            "title": "Saxophone Essentials",
+            "slug": "saxophone-essentials",
+            "description": "Learn to play the saxophone from the basics to advanced jazz improvisation.",
+            "price": 109.99,
+            "instructor": "Robert Collins",
+            "isFeatured": false,
+            "image": "/courses/saxophone.jpg"
+        },
+        {
+            "id": 10,
+            "title": "Songwriting Workshop",
+            "slug": "songwriting-workshop",
+            "description": "Develop your songwriting skills and learn to craft memorable melodies and lyrics.",
+            "price": 99.99,
+            "instructor": "Emma Davis",
+            "isFeatured": true,
+            "image": "/courses/songwriting.jpg"
+        }
+    ]
+}
