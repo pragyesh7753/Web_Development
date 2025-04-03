@@ -20,7 +20,7 @@ function FeaturedCourses() {
 
 
     return (
-        <div className='py-12 bg-[#3c3c3c]'>
+        <div className='py-12 bg-zinc-950'>
             <div>
                 <div className="text-center">
                     <h2 className='text-base text-teal-600 font-semibold tracking-wide uppercase'>

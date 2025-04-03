@@ -1,1 +1,30 @@
 @import "tailwindcss";
+
+.react-datepicker {
+    @apply bg-gray-900 border-white/20 text-white;
+  }
+  
+  .react-datepicker__header {
+    @apply bg-gray-800 border-white/20;
+  }
+  
+  .react-datepicker__current-month,
+  .react-datepicker__day-name {
+    @apply text-white;
+  }
+  
+  .react-datepicker__day {
+    @apply text-white hover:bg-purple-500 rounded;
+  }
+  
+  .react-datepicker__day--selected {
+    @apply bg-purple-500;
+  }
+  
+  .react-datepicker__day--keyboard-selected {
+    @apply bg-purple-500;
+  }
+  
+  .react-datepicker__input-container input {
+    @apply w-full;
+  }

@@ -4,16 +4,24 @@ export const TodoContext = createContext({
     todos: [
         {
             id: 1,
-            todo: " Todo msg",
+            todo: "Todo msg",
             completed: false,
+            dueDate: null,
+            priority: "medium",
+            tags: [],
         }
     ],
     addTodo: (todo) => {},
     updateTodo: (id, todo) => {},
     deleteTodo: (id) => {},
-    toggleComplete: (id) => {}
+    toggleComplete: (id) => {},
+    searchTerm: "",
+    setSearchTerm: (term) => {},
+    filterPriority: "all",
+    setFilterPriority: (priority) => {},
+    filterStatus: "all",
+    setFilterStatus: (status) => {}
 })
-
 
 export const useTodo = () => {
     return useContext(TodoContext)

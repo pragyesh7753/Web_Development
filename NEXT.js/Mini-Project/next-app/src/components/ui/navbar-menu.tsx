@@ -12,7 +12,7 @@ const transition = {
     restDelta: 0.001,
     restSpeed: 0.001,
 };
-
+ 
 export const MenuItem = ({
     setActive,
     active,
