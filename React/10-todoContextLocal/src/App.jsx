@@ -55,11 +55,11 @@ function App() {
     });
 
   return (
-    <TodoProvider value={{ 
-      todos, 
-      addTodo, 
-      updateTodo, 
-      deleteTodo, 
+    <TodoProvider value={{
+      todos,
+      addTodo,
+      updateTodo,
+      deleteTodo,
       toggleComplete,
       searchTerm,
       setSearchTerm,
@@ -68,8 +68,8 @@ function App() {
       filterStatus,
       setFilterStatus
     }}>
-      <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 py-8">
-        <div className="w-full max-w-2xl mx-auto shadow-xl rounded-xl px-6 py-6 backdrop-blur-sm bg-white/10">
+      <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 py-8 flex items-center justify-center">
+        <div className="w-full max-w-2xl mx-auto shadow-xl rounded-xl px-6 py-6 backdrop-blur-sm bg-white/10 max-h-[90vh] flex flex-col">
           <div className="flex items-center justify-center gap-3 mb-8">
             <lord-icon
               src="https://cdn.lordicon.com/wxhtpnnk.json"
@@ -79,7 +79,7 @@ function App() {
             />
             <h1 className="text-2xl font-bold text-center mb-8 mt-2">Manage Your Todos</h1>
           </div>
-          
+
           <div className="mb-6">
             <TodoForm />
           </div>
@@ -103,10 +103,10 @@ function App() {
                 onChange={(e) => setFilterPriority(e.target.value)}
                 className="bg-white/10 border border-white/20 rounded-full px-4 py-2 text-white outline-none focus:bg-white/20 transition-all"
               >
-                <option value="all">All Priorities</option>
-                <option value="high">High Priority</option>
-                <option value="medium">Medium Priority</option>
-                <option value="low">Low Priority</option>
+                <option value="all" className="bg-purple-600 text-white">All Priorities</option>
+                <option value="high" className="bg-purple-600 text-white">High Priority</option>
+                <option value="medium" className="bg-purple-600 text-white">Medium Priority</option>
+                <option value="low" className="bg-purple-600 text-white">Low Priority</option>
               </select>
 
               <select
@@ -114,36 +114,39 @@ function App() {
                 onChange={(e) => setFilterStatus(e.target.value)}
                 className="bg-white/10 border border-white/20 rounded-full px-4 py-2 text-white outline-none focus:bg-white/20 transition-all"
               >
-                <option value="all">All Status</option>
-                <option value="completed">Completed</option>
-                <option value="incomplete">Incomplete</option>
+                <option value="all" className="bg-purple-600 text-white">All Status</option>
+                <option value="completed" className="bg-purple-600 text-white">Completed</option>
+                <option value="incomplete" className="bg-purple-600 text-white">Incomplete</option>
               </select>
             </div>
           </div>
 
-          <AnimatePresence>
-            <div className="flex flex-col gap-y-3">
-              {filteredTodos.length === 0 ? (
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  className="text-center py-10"
-                >
-                  <lord-icon
-                    src="https://cdn.lordicon.com/msoeawqm.json"
-                    trigger="loop"
-                    delay="2000"
-                    style={{ width: "150px", height: "150px", margin: "0 auto" }}
-                  />
-                  <p className="text-white/80 mt-4">No todos found. Start adding some!</p>
-                </motion.div>
-              ) : (
-                filteredTodos.map((todo) => (
-                  <TodoItem key={todo.id} todo={todo} />
-                ))
-              )}
-            </div>
-          </AnimatePresence>
+          <div className="overflow-y-auto flex-1 pr-1">
+            <AnimatePresence>
+              <div className="flex flex-col gap-y-3">
+                {filteredTodos.length === 0 ? (
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    className="text-center py-10"
+                  >
+                    <lord-icon
+                      src="https://cdn.lordicon.com/msoeawqm.json"
+                      trigger="loop"
+                      delay="2000"
+                      style={{ width: "150px", height: "150px", margin: "0 auto" }}
+                    />
+                    <p className="text-white/80 mt-4">No todos found. Start adding some!</p>
+                  </motion.div>
+                ) : (
+                  filteredTodos.map((todo) => (
+                    <TodoItem key={todo.id} todo={todo} />
+                  ))
+                )}
+              </div>
+            </AnimatePresence>
+          </div>
+          <h1 className='text-center text-white mt-4'>Created with ❤️ by Pragyesh Kumar Seth</h1>
         </div>
       </div>
     </TodoProvider>
