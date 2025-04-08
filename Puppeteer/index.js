@@ -1,4 +1,4 @@
-import { launch } from 'puppeteer';
+const { launch } = require('puppeteer');
 
 (async () => {
     const browser = await launch({ headless: false });
