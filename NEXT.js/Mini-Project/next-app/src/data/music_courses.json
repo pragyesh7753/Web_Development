@@ -8,7 +8,7 @@
             "price": 99.99,
             "instructor": "John Doe",
             "isFeatured": true,
-            "image": "/courses/guitar.jpg"
+            "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=800&q=80"
         },
         {
             "id": 2,
@@ -18,7 +18,7 @@
             "price": 129.99,
             "instructor": "Sarah Johnson",
             "isFeatured": true,
-            "image": "/courses/piano.jpg"
+            "image": "https://plus.unsplash.com/premium_photo-1682326302625-1e5b7826fb3c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D0"
         },
         {
             "id": 3,
@@ -28,7 +28,7 @@
             "price": 89.99,
             "instructor": "Mike Thompson",
             "isFeatured": false,
-            "image": "/courses/drums.jpg"
+            "image": "https://images.unsplash.com/photo-1461784121038-f088ca1e7714?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "id": 4,
@@ -38,7 +38,7 @@
             "price": 109.99,
             "instructor": "Maria Garcia",
             "isFeatured": true,
-            "image": "/courses/vocal.jpg"
+            "image": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80"
         },
         {
             "id": 5,
@@ -48,17 +48,17 @@
             "price": 79.99,
             "instructor": "Professor Alan Wright",
             "isFeatured": true,
-            "image": "/courses/theory.jpg"
+            "image": "https://images.unsplash.com/photo-1488376739361-ed24c9beb6d0?q=80&w=1476&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "id": 6,
-            "title": "Bass Guitar for Beginners",
-            "slug": "bass-guitar-beginners",
-            "description": "Learn to lay down the groove with this beginner-friendly bass guitar course.",
+            "title": "Harmonium for Beginners",
+            "slug": "harmonium-for-beginners",
+            "description": "Start your journey with the harmonium, learning basic notes, chords, and simple melodies.",
             "price": 89.99,
-            "instructor": "James Wilson",
+            "instructor": "Anjali Mehra",
             "isFeatured": false,
-            "image": "/courses/bass.jpg"
+            "image": "https://images.unsplash.com/photo-1627796043950-e24510a73cb1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "id": 7,
@@ -68,7 +68,7 @@
             "price": 119.99,
             "instructor": "Elizabeth Chen",
             "isFeatured": false,
-            "image": "/courses/violin.jpg"
+            "image": "https://images.unsplash.com/photo-1465821185615-20b3c2fbf41b?q=80&w=1598&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "id": 8,
@@ -78,7 +78,7 @@
             "price": 149.99,
             "instructor": "DJ Marcus",
             "isFeatured": false,
-            "image": "/courses/electronic.jpg"
+            "image": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "id": 9,
@@ -88,7 +88,7 @@
             "price": 109.99,
             "instructor": "Robert Collins",
             "isFeatured": false,
-            "image": "/courses/saxophone.jpg"
+            "image": "https://images.unsplash.com/photo-1623123776919-e5208e9b0b47?q=80&w=1514&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         {
             "id": 10,
@@ -98,7 +98,7 @@
             "price": 99.99,
             "instructor": "Emma Davis",
             "isFeatured": true,
-            "image": "/courses/songwriting.jpg"
+            "image": "https://plus.unsplash.com/premium_photo-1682088065949-7160039a6dd8?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         }
     ]
 }
