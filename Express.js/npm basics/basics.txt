@@ -1,0 +1,10 @@
+node js me jo installed hoke aata hai aur jo hm npm se download karte hai vo hota hai package.
+
+install -> npm i packageKaNaam
+uninstall -> npm uninstall packageKaNaam
+
+dependencies -> packages jispe project dependent hai
+devDependencies -> aise packages jo sirf development me kam ayenge, pr jb app deploy ho jayega tb iska use nhi hoga
+
+Scripts -
+kai bar aap script chalate ho aur us script me ap likhte ho ye command npm start, npm run dev, npm run concurrent

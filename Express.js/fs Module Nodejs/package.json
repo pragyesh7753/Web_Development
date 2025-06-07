@@ -1,0 +1,12 @@
+{
+  "name": "fs-module-nodejs",
+  "version": "1.0.0",
+  "description": "I am going to learn about fs module in Node.js",
+  "license": "ISC",
+  "author": "Pragyesh Kumar Seth",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

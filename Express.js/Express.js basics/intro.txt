@@ -1,0 +1,6 @@
+Introduction
+express js ek npm package h, framework hai
+it manages everything from receiving the request and gving the response
+
+Middleware
+jab bhi server request accept karta hai waha se route ke beech pahuchne tak agar aap us request ko bich me rokte ho aur kuchh perform karte ho to ye element middleware aklata hai
