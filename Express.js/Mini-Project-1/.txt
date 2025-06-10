@@ -1,0 +1,18 @@
+initialize a project with npm
+
+express install
+
+dynamic routing - hm log kai bar kuchh routes dekhte hai unmein sirf ek hi hissa change hota hai jaise ki /author/pragyesh, /author/anand, /author/hritik
+    dynamic routing
+    how toget data coming from frontend at backend
+
+setting up parsers for form
+
+setting up ejs for ejs pages
+    install ejs from npm
+    setup ejs as a view engine
+
+setting up public static files
+
+
+We're making a notes taking webapp

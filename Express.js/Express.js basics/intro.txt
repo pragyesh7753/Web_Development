@@ -4,3 +4,11 @@ it manages everything from receiving the request and gving the response
 
 Middleware
 jab bhi server request accept karta hai waha se route ke beech pahuchne tak agar aap us request ko bich me rokte ho aur kuchh perform karte ho to ye element middleware aklata hai
+
+Form Handling and working with forms
+handle backend process of forms and making sure the data coming from any frontend li, fw, templating engines,we still andle it at backend
+
+Session & Cookie
+hu log kuchh bhi data frontend par browser par rakh skte hai and jab bhi ap kuchh bhi request backend pr kroge wo frontend pr saved data automatically backend pr chla jaayega
+
+tumne to bheja tha plain text par server ko mila blob which is not directly readable ab iss chiz ko handle karna padega ki hm us blob ko vapas se readable kr ske 

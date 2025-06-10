@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
 
+app.use(express.json())  // to parse JSON bodies
+app.use(express.urlencoded({ encoded: true }))   //  to parse URL-encoded bodies
+
 app.use(function (req, res, next) {
     console.log("Middleware chala");
     next(); // Call next middleware or route handler
