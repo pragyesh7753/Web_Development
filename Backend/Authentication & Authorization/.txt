@@ -1,0 +1,5 @@
+Authentication:
+    user ko profile dene se pahle ye check krna hota hai kaun
+
+Authorization:
+    kya user ko particular task perform krne ke rights hai ya nhi
