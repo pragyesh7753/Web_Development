@@ -1,0 +1,25 @@
+Backend me do servers hote hai - application server aur database server
+
+Data Storage
+Database
+Type of DBs - SQL | NoSQL
+    SQL - data ko ek roop me rkhna aur us roop ka naame hai tables
+    NoSQL - objects ke form me data hai
+
+What MongoDB and why
+
+Terminologies
+    Database ->
+    Collection
+    Document
+
+
+Code                                        Database
+-------------------------------------------------------------------------------------------
+mongoose.connect        ->                database create
+model create            ->                Collection
+CREATE code             ->                document
+
+schema
+model
+crud
