@@ -1,0 +1,23 @@
+Authentication:
+    user ko profile dene se pahle ye check krna hota hai kaun
+
+Authorization:
+    kya user ko particular task perform krne ke rights hai ya nhi
+
+server har baar bhool jata hai ki aap kaun ho to har bar har kaam ke liye apse puchhega aap kaun ho
+
+sabse phle hme kucch chijein sikhni hai alag alag 
+    1. cookie kaise set aur read krte hai
+    2. bcrypt kaise use krte hai for password hashing and de-hashing (SHA 256 algorithm)
+    3. jwt kya h and jwt me kaise store karein aur bahar nikaale
+
+Important Terms-
+    Salt - a random string
+    Hash - password that is changed in random meaningless characters
+    salt + hash == hashed password
+
+password=> polololo
+hash=> $2b$10$lJmL1UjsTAJzoXe2qLZ4Oua0qvg44HpTEYyqrr0xrxXKNyOSxbOY6
+
+JWT teen hisso se banta hai-
+    1. 
