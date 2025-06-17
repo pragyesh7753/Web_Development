@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <div class="w-full min-h-screen bg-zinc-900 text-white p-10">
+        <div class="w-full flex justify-end">
+            <a class="bg-red-500 rounded-md px-3 py-2 text-sm mb-5 inline-block" href="/logout">Logout</a>
+        </div>
+        <h3 class="text-3xl"><span class="font-light">Hello</span>, <%= user.name %> 👋 </h3>
+        <h5 class="mb-5">You can create a new post</h5>
+        <form action="">
+            <textarea placeholder="What's on your mind?"
+                class="block p-3 outline-none w-1/3 resize-none bg-transparent border-2 border-zinc-800 rounded-md"
+                name=""></textarea>
+            <input class="block px-3 text-sm w-40 py-2 bg-blue-500 rounded-md mt-2" type="submit"
+                value="Create New Post">
+        </form>
+        <div class="posts mt-20">
+            <h3 class="text-zinc-400">Your Posts</h3>
+            <div class="postcontainer mt-5">
+                <div class="post w-1/3 p-4 border-2 border-zinc-700 rounded-md bg-zinc-800">
+                    <h4 class="text-blue-500 mb-2">@someusernamce</h4>
+                    <p class="text-sm tracking-tight">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
+                        labore praesentium recusandae
+                        delectus.</p>
+                    <div class="btns flex mt-5">
+                        <a class="text-blue-500" href="">Like</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
