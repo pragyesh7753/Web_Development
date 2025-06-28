@@ -29,7 +29,7 @@ function TodoItem({ todo }) {
     }
 
     const getPriorityColor = () => {
-        switch(priority) {
+        switch(todo.priority) {
             case 'high': return 'bg-red-500/20';
             case 'medium': return 'bg-yellow-500/20';
             case 'low': return 'bg-green-500/20';
@@ -42,110 +42,54 @@ function TodoItem({ todo }) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className={`flex flex-col border border-white/20 rounded-xl px-4 py-3 gap-y-2 backdrop-blur-sm ${todo.completed ? "bg-green-500/20" : getPriorityColor()}`}
+            className={`flex flex-col border border-white/20 rounded-lg px-3 py-2 gap-y-1 glass shadow-md transition-all duration-200 hover:scale-[1.02] hover:shadow-xl ${todo.completed ? "bg-green-400/20" : getPriorityColor()}`}
+            style={{ transformOrigin: 'center center' }}
         >
-            <div className="flex items-center gap-x-3">
+            <div className="flex items-center gap-x-2">
                 <input
                     type="checkbox"
-                    className="cursor-pointer w-5 h-5 rounded-full accent-purple-500"
+                    className="cursor-pointer w-4 h-4 rounded-full accent-purple-500 border-2 border-purple-400 shadow-sm hover:scale-110 transition-all duration-150"
                     checked={todo.completed}
                     onChange={toggleCompleted}
                 />
                 <input
                     type="text"
-                    className={`border outline-none w-full rounded-lg px-2 py-1 ${
-                        isTodoEditable ? "bg-white/10 border-white/20" : "border-transparent bg-transparent"
-                    } ${todo.completed ? "line-through text-white/60" : "text-white"}`}
+                    className={`border outline-none w-full rounded-md px-2 py-0.5 text-base font-medium transition-all duration-200 ${
+                        isTodoEditable ? "bg-white/20 border-white/30 text-white" : "border-transparent bg-transparent text-white/90"
+                    } ${todo.completed ? "line-through text-white/60" : ""}`}
                     value={todoMsg}
                     onChange={(e) => setTodoMsg(e.target.value)}
                     readOnly={!isTodoEditable}
+                    style={{ background: isTodoEditable ? "rgba(255,255,255,0.08)" : "none" }}
                 />
-                
                 <button
-                    className="inline-flex w-8 h-8 rounded-lg text-sm border border-white/20 justify-center items-center bg-white/10 hover:bg-white/20 shrink-0 disabled:opacity-50 transition-all"
-                    onClick={() => {
-                        if (todo.completed) return;
-                        if (isTodoEditable) {
-                            editTodo();
-                        } else setIsTodoEditable((prev) => !prev);
-                    }}
-                    disabled={todo.completed}
+                    className="btn ml-1 px-2 py-0.5 text-xs"
+                    onClick={() => isTodoEditable ? editTodo() : setIsTodoEditable(true)}
+                    style={{ minWidth: 44 }}
                 >
-                    <lord-icon
-                        src={isTodoEditable ? "https://cdn.lordicon.com/oqdmuxru.json" : "https://cdn.lordicon.com/wloilxuq.json"}
-                        trigger="hover"
-                        style={{ width: "20px", height: "20px" }}
-                    />
+                    {isTodoEditable ? "Save" : "Edit"}
                 </button>
-                
                 <button
-                    className="inline-flex w-8 h-8 rounded-lg text-sm border border-white/20 justify-center items-center bg-white/10 hover:bg-white/20 shrink-0 transition-all"
+                    className="btn ml-1 px-2 py-0.5 text-xs bg-gradient-to-r from-red-500 to-pink-500 hover:from-pink-500 hover:to-red-500"
                     onClick={() => deleteTodo(todo.id)}
+                    style={{ minWidth: 44 }}
                 >
-                    <lord-icon
-                        src="https://cdn.lordicon.com/jmkrnisz.json"
-                        trigger="hover"
-                        style={{ width: "20px", height: "20px" }}
-                    />
+                    Delete
                 </button>
             </div>
-
-            {isTodoEditable ? (
-                <div className="flex flex-col md:flex-row gap-4 items-center text-sm">
-                    <div className="flex items-center gap-2 w-full md:w-auto">
-                        <Calendar className="w-4 h-4 text-white" />
-                        <DatePicker
-                            selected={dueDate}
-                            onChange={date => setDueDate(date)}
-                            placeholderText="Set due date"
-                            className="bg-white/10 border border-white/20 rounded-full px-3 py-1 text-white w-full md:w-auto"
-                            dateFormat="MMM d, yyyy"
-                        />
-                    </div>
-
-                    <select
-                        value={priority}
-                        onChange={(e) => setPriority(e.target.value)}
-                        className="w-full md:w-auto bg-white/10 border border-white/20 rounded-full px-3 py-1 text-white"
-                    >
-                        <option value="low">Low Priority</option>
-                        <option value="medium">Medium Priority</option>
-                        <option value="high">High Priority</option>
-                    </select>
-
-                    <div className="flex items-center gap-2 flex-1 w-full">
-                        <Tags className="w-4 h-4 text-white" />
-                        <input
-                            type="text"
-                            placeholder="Add tags (comma-separated)"
-                            className="w-full bg-white/10 border border-white/20 rounded-full px-3 py-1 text-white"
-                            value={tags}
-                            onChange={(e) => setTags(e.target.value)}
-                        />
-                    </div>
-                </div>
-            ) : (
-                <div className="flex gap-4 items-center text-sm">
-                    {dueDate && (
-                        <div className="flex items-center gap-1 text-white/80">
-                            <Calendar className="w-4 h-4" />
-                            <span>{format(new Date(dueDate), 'MMM d, yyyy')}</span>
-                        </div>
-                    )}
-                    {todo.tags.length > 0 && (
-                        <div className="flex gap-2 flex-wrap">
-                            {todo.tags.map((tag, index) => (
-                                <span 
-                                    key={index}
-                                    className="bg-white/10 px-2 py-0.5 rounded-full text-xs text-white/80"
-                                >
-                                    {tag}
-                                </span>
-                            ))}
-                        </div>
-                    )}
-                </div>
-            )}
+            <div className="flex flex-wrap gap-1 items-center mt-0.5">
+                <span className="flex items-center gap-1 text-xs text-white/70 bg-black/20 px-1.5 py-0.5 rounded-full">
+                    <Calendar className="w-3 h-3" />
+                    {todo.dueDate ? format(new Date(todo.dueDate), 'MMM d, yyyy') : "No due date"}
+                </span>
+                <span className={`flex items-center gap-1 text-xs px-1.5 py-0.5 rounded-full ${getPriorityColor()} border border-white/10`}>
+                    <Tags className="w-3 h-3" />
+                    {todo.priority.charAt(0).toUpperCase() + todo.priority.slice(1)}
+                </span>
+                {todo.tags && todo.tags.length > 0 && todo.tags.map((tag, idx) => (
+                    <span key={idx} className="text-xs bg-purple-500/30 text-white px-1.5 py-0.5 rounded-full">#{tag}</span>
+                ))}
+            </div>
         </motion.div>
     );
 }

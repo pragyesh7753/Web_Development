@@ -54,6 +54,7 @@ function TodoForm() {
                         src="https://cdn.lordicon.com/mecwbjnp.json"
                         trigger="hover"
                         style={{ width: "20px", height: "20px" }}
+                        colors="primary:#ffffff,secondary:#ffffff"
                     />
                     Add
                 </button>

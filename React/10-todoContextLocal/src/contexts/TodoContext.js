@@ -6,21 +6,22 @@ export const TodoContext = createContext({
             id: 1,
             todo: "Todo msg",
             completed: false,
+            completedAt: null,
             dueDate: null,
             priority: "medium",
             tags: [],
         }
     ],
-    addTodo: (todo) => {},
-    updateTodo: (id, todo) => {},
-    deleteTodo: (id) => {},
-    toggleComplete: (id) => {},
+    addTodo: () => {},
+    updateTodo: () => {},
+    deleteTodo: () => {},
+    toggleComplete: () => {},
     searchTerm: "",
-    setSearchTerm: (term) => {},
+    setSearchTerm: () => {},
     filterPriority: "all",
-    setFilterPriority: (priority) => {},
+    setFilterPriority: () => {},
     filterStatus: "all",
-    setFilterStatus: (status) => {}
+    setFilterStatus: () => {}
 })
 
 export const useTodo = () => {
