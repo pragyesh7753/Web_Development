@@ -2,16 +2,16 @@ import { Resend } from 'resend';
 import dotenv from 'dotenv'
 dotenv.config()
 
-if (!process.env.RESEND_API) {
+if(!process.env.RESEND_API){
     console.log("Provide RESEND_API in side the .env file")
 }
 
 const resend = new Resend(process.env.RESEND_API);
 
-const sendEmail = async ({ sendTo, subject, html }) => {
+const sendEmail = async({sendTo, subject, html })=>{
     try {
         const { data, error } = await resend.emails.send({
-            from: 'Binkeyit <noreply@pragyesh.tech>',
+            from: 'Binkeyit <noreply@amitprajapati.co.in>',
             to: sendTo,
             subject: subject,
             html: html,
@@ -28,3 +28,4 @@ const sendEmail = async ({ sendTo, subject, html }) => {
 }
 
 export default sendEmail
+

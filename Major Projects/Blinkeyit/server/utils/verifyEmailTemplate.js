@@ -1,8 +1,11 @@
-const verifyEmailTemplate = (name, url) => {
-    return `
-    <p>Thank you for registering on Blinkeyit.</p>
-    <button style = "color : white; background : blue ; margin-top : 10px>
+const verifyEmailTemplate = ({name,url})=>{
+    return`
+<p>Dear ${name}</p>    
+<p>Thank you for registering on Binkeyit.</p>   
+<a href=${url} style="color:black;background :orange;margin-top : 10px,padding:20px,display:block">
     Verify Email
-    </button>
-    `
+</a>
+`
 }
+
+export default verifyEmailTemplate
